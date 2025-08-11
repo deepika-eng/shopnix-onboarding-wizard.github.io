@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theme + Product Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    /* Theme selection */
+    .theme-section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .themes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .theme-card {
+        flex: 1 1 calc(33.333% - 20px);
+        background: white;
+        border: 1px solid #ddd;
+        padding: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .theme-card:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transform: scale(1.02);
+    }
+
+    .theme-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    /* Form & preview layout */
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .form-section, .preview-section {
+        flex: 1 1 45%;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .form-section input, .form-section textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-section button {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .preview-card {
+        text-align: center;
+    }
+
+    .preview-card img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+        .theme-card {
+            flex: 1 1 100%;
+        }
+        .form-section, .preview-section {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Step 2: Theme Selection -->
+    <div class="theme-section">
+        <h2>Select a Theme</h2>
+        <div class="themes">
+            <div class="theme-card">
+                <img src="theme1.jpg" alt="Theme 1">
+                <p>Theme 1</p>
+            </div>
+            <div class="theme-card">
+                <img src="theme2.jpg" alt="Theme 2">
+                <p>Theme 2</p>
+            </div>
+            <div class="theme-card">
+                <img src="theme3.jpg" alt="Theme 3">
+                <p>Theme 3</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 3: Product Form + Preview -->
+    <div class="content">
+        <!-- Form -->
+        <div class="form-section">
+            <h3>Product Details</h3>
+            <input type="text" placeholder="Product Name">
+            <textarea rows="4" placeholder="Product Description"></textarea>
+            <input type="number" placeholder="Price">
+            <input type="file">
+            <button>Add Product</button>
+        </div>
+
+        <!-- Preview -->
+        <div class="preview-section">
+            <h3>Live Preview</h3>
+            <div class="preview-card">
+                <img src="placeholder.jpg" alt="Preview">
+                <h4>Product Name</h4>
+                <p>Description will appear here...</p>
+                <strong>$0.00</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
